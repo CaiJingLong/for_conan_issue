@@ -1,0 +1,32 @@
+{% set ndk_path="/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105" %}
+{% set tc=ndk_path ~ "/toolchains/llvm/prebuilt/darwin-x86_64" %}
+{% set host="aarch64-linux-android" %}
+{% set bin= tc ~ "/bin" %}
+{% set cc= bin ~ "/" ~ host ~ "21-clang" %}
+{% set cxx= cc ~ "++" %}
+
+[settings]
+os=Android
+os.api_level=21
+arch=armv8
+compiler=clang
+compiler.version=14
+compiler.libcxx=c++_static
+compiler.cppstd=14
+build_type=Release    
+[conf]
+tools.android:ndk_path={{ndk_path}}
+
+[buildenv]
+TOOLCHAIN={{ tc }}
+CC={{ cc }}
+CXX={{ cxx }}
+LD={{ bin }}/ld.lld
+AR={{ bin }}/llvm-ar
+AS={{cc}}
+RANDLIB={{bin}}/llvm-ranlib
+STRIP={{bin}}/llvm-strip
+NM={{bin}}/llvm-nm
+OBJDUMP={{bin}}/llvm-objdump
+ANDROID_API_LEVEL=21
+HOST={{host}}
