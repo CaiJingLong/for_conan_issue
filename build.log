@@ -1,0 +1,130 @@
+profile: android-v8
+OUTPUT_LIB_DIR: build/install/android-v8
+
+======== Exporting recipe to the cache ========
+hello/1.0: Exporting package recipe: /Users/jinglongcai/code/c/conan-report-issue/conan-report-issue-13373/conanfile.py
+hello/1.0: Copied 1 '.py' file: conanfile.py
+hello/1.0: Exported to cache folder: /Users/jinglongcai/.conan2/p/helloccbc1a6e10e52/e
+hello/1.0: Exported: hello/1.0#59f931ff7644138bcace6e7ca65a8fc2 (2023-03-10 09:26:19 UTC)
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=armv8
+build_type=Release
+compiler=clang
+compiler.cppstd=14
+compiler.libcxx=c++_static
+compiler.version=14
+os=Android
+os.api_level=21
+[conf]
+tools.android:ndk_path=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105
+[buildenv]
+TOOLCHAIN=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64
+CC=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android21-clang
+CXX=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android21-clang++
+LD=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld
+AR=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar
+AS=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android21-clang
+RANDLIB=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib
+STRIP=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-strip
+NM=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-nm
+OBJDUMP=/Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-objdump
+ANDROID_API_LEVEL=21
+HOST=aarch64-linux-android
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=clang
+compiler.cppstd=gnu17
+compiler.libcxx=libc++
+compiler.version=14
+os=Macos
+
+
+======== Computing dependency graph ========
+Graph root
+    cli
+Requirements
+    hello/1.0#59f931ff7644138bcace6e7ca65a8fc2 - Cache
+    libffi/3.4.3#ab23056d668dc13482a811f215f7be3e - Cache
+
+======== Computing necessary packages ========
+hello/1.0: Checking 9 compatible configurations:
+hello/1.0: 'eaf9a7beb79d1d9ebc26213332b5f661de2af8cc': compiler.cppstd=11
+hello/1.0: 'a92ccced27a040eef421d26e058dcc6c0c2a2a9d': compiler.cppstd=gnu11
+hello/1.0: 'f9d9e68cc20d9432a8e201baaec2d3d086269a80': compiler.cppstd=gnu14
+hello/1.0: 'cca55ca566ae0cacb2604dbb6e1da178576ccb2a': compiler.cppstd=17
+hello/1.0: 'e761b7eae043837734d601b2ab6ae05c54801480': compiler.cppstd=gnu17
+hello/1.0: '4128c9df0a17f93429466819eed1fd521ee41daa': compiler.cppstd=20
+hello/1.0: 'd458acd7efd93a188156e589733ab92a185a9b0f': compiler.cppstd=gnu20
+hello/1.0: '0245f017aa76cdc27357c001bc21ebdc48188ba4': compiler.cppstd=23
+hello/1.0: '41c7eb05d24fa298be04a1522f9c237fb441424f': compiler.cppstd=gnu23
+Requirements
+    hello/1.0#59f931ff7644138bcace6e7ca65a8fc2:fa9461476a5ea03363eadf3e6a03f4bbf846acaa - Build
+    libffi/3.4.3#ab23056d668dc13482a811f215f7be3e:587bc1a8f4e4682a503b7e94c9ad8e2f64d99d3c#1d958b6a4d644124643c1090aaa6f6ea - Cache
+
+======== Installing packages ========
+libffi/3.4.3: Already installed!
+
+-------- Building package hello/1.0 from source (2 of 2) --------
+hello/1.0: Package hello/1.0:fa9461476a5ea03363eadf3e6a03f4bbf846acaa
+hello/1.0: Copying sources to build folder
+hello/1.0: Building your package in /Users/jinglongcai/.conan2/p/t/hellobcc7065c881c4/b
+hello/1.0: Writing generators to /Users/jinglongcai/.conan2/p/t/hellobcc7065c881c4/b/build/Release/generators
+hello/1.0: Generator 'CMakeDeps' calling 'generate()'
+hello/1.0: Calling generate()
+hello/1.0: Generators folder: /Users/jinglongcai/.conan2/p/t/hellobcc7065c881c4/b/build/Release/generators
+hello/1.0: CMakeToolchain generated: conan_toolchain.cmake
+hello/1.0: CMakeToolchain generated: CMakePresets.json
+hello/1.0: CMakeToolchain generated: ../../../CMakeUserPresets.json
+hello/1.0: Generating aggregated env files
+hello/1.0: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+hello/1.0: Calling build()
+hello/1.0: Running CMake.configure()
+hello/1.0: RUN: cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="/Users/jinglongcai/.conan2/p/t/hellobcc7065c881c4/b/build/Release/generators/conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="/Users/jinglongcai/.conan2/p/t/hellobcc7065c881c4/p" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DCMAKE_BUILD_TYPE="Release" "/Users/jinglongcai/.conan2/p/t/hellobcc7065c881c4/b/."
+-- Using Conan toolchain: /Users/jinglongcai/.conan2/p/t/hellobcc7065c881c4/b/build/Release/generators/conan_toolchain.cmake
+-- Conan toolchain: Setting CMAKE_POSITION_INDEPENDENT_CODE=ON (options.fPIC)
+-- Conan toolchain: C++ Standard 14 with extensions OFF
+-- Conan toolchain: Setting BUILD_SHARED_LIBS = OFF
+-- The CXX compiler identification is Clang 14.0.6
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Volumes/SanDisk_2T/sdk/android/sdk/ndk/25.0.8775105/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at CMakeLists.txt:10 (find_package):
+  By not providing "Findfmt.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "fmt", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "fmt" with any of
+  the following names:
+
+    fmtConfig.cmake
+    fmt-config.cmake
+
+  Add the installation prefix of "fmt" to CMAKE_PREFIX_PATH or set "fmt_DIR"
+  to a directory containing one of the above files.  If "fmt" provides a
+  separate development package or SDK, be sure it has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/jinglongcai/.conan2/p/t/hellobcc7065c881c4/b/build/Release/CMakeFiles/CMakeOutput.log".
+
+hello/1.0: ERROR: 
+Package 'fa9461476a5ea03363eadf3e6a03f4bbf846acaa' build failed
+hello/1.0: WARN: Build folder /Users/jinglongcai/.conan2/p/t/hellobcc7065c881c4/b/build/Release
+*********************************************************
+Recipe 'hello/1.0' cannot build its binary
+It is possible that this recipe is not Conan 2.0 ready
+If the recipe comes from ConanCenter check: https://conan.io/cci-v2.html
+If it is your recipe, check it is updated to 2.0
+*********************************************************
+
+ERROR: hello/1.0: Error in build() method, line 76
+	cmake.configure()
+	ConanException: Error 1 while executing
